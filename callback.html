@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>What is a Callback?</h2>
+    <h3>
+        A callback is a function that is passed as an argument to another function and is executed when that function completes its operation. Callbacks are often used for asynchronous operations like handling events, making HTTP requests, or reading files.
+    </h3>
+    <script>
+        // Define a function that takes a callback
+        function doSomethingAsync(callback) {
+            setTimeout(function () {
+                console.log("Task is done!");
+                callback();
+            }, 2000); // Simulate an asynchronous task that takes 2 seconds
+        }
+
+        // Define a callback function
+        function callbackFunction() {
+            console.log("Callback function is called.");
+        }
+
+        // Call the function with the callback
+        doSomethingAsync(callbackFunction);
+
+        console.log("After calling doSomethingAsync.");
+
+    </script>
+</body>
+
+</html>
